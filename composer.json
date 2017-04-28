@@ -1,0 +1,29 @@
+{
+  "name": "origami/media",
+  "description": "Laravel 5 / Glide integration package",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Papertank Limited",
+      "email": "david@papertank.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/http": "~5.2",
+    "illuminate/routing": "~5.2",
+    "illuminate/support": "~5.2",
+    "league/glide-laravel": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Origami\\Media\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
