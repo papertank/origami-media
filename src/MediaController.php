@@ -56,9 +56,9 @@ class MediaController extends Controller {
 
     protected function videoRangeRequest($file)
     {
-        $fp = $this->files->readStream($file);
-        $mime = $this->files->getMimetype($file);
-        $size = $this->files->getSize($file);
+        $fp = Storage::readStream($file);
+        $mime = Storage::getMimetype($file);
+        $size = Storage::getSize($file);
         $length = $size;
         $start  = 0;
         $end    = $size - 1;
@@ -118,9 +118,9 @@ class MediaController extends Controller {
             return $this->videoRangeRequest($file);
         }
 
-        $contents = $this->files->read($file);
-        $mime = $this->files->getMimetype($file);
-        $length = $this->files->getSize($file);
+        $contents = Storage::read($file);
+        $mime = Storage::getMimetype($file);
+        $length = Storage::getSize($file);
 
         return (new Response($contents, 200))
             ->header('Content-Type', $mime)
